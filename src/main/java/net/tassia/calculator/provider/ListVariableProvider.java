@@ -1,6 +1,7 @@
 package net.tassia.calculator.provider;
 
 import net.tassia.calculator.Variable;
+import net.tassia.calculator.value.NumericValue;
 
 import java.util.*;
 
@@ -28,7 +29,7 @@ public class ListVariableProvider implements VariableProvider {
 	}
 
 	@Override
-	public double provideVariable(String name) throws NoSuchElementException {
+	public NumericValue provideVariable(String name) throws NoSuchElementException {
 		Variable var = map.get(name);
 		if (var == null) {
 			throw new NoSuchElementException("Variable '" + name + "' not found.");

@@ -1,13 +1,19 @@
 package net.tassia.calculator;
 
+import net.tassia.calculator.value.ConstantValue;
+import net.tassia.calculator.value.NumericValue;
 import org.jetbrains.annotations.NotNull;
 
 public class Variable {
 
 	@NotNull private final String name;
-	private final double value;
+	@NotNull private final NumericValue value;
 
 	public Variable(@NotNull String name, double value) {
+		this(name, new ConstantValue(value));
+	}
+
+	public Variable(@NotNull String name, @NotNull NumericValue value) {
 		this.name = name;
 		this.value = value;
 	}
@@ -17,7 +23,8 @@ public class Variable {
 		return name;
 	}
 
-	public double getValue() {
+	@NotNull
+	public NumericValue getValue() {
 		return value;
 	}
 

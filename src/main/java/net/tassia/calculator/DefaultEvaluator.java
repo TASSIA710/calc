@@ -56,7 +56,8 @@ public class DefaultEvaluator implements Evaluator {
 
 		} else if (expression instanceof VariableCall) {
 			VariableCall cast = (VariableCall) expression;
-			return variableProvider.provideVariable(cast.getVariable());
+			NumericValue value = variableProvider.provideVariable(cast.getVariable());
+			return evaluate(value, variableProvider, functionProvider);
 
 		}
 		throw new RuntimeException("Couldn't evaluate value: " + expression);
