@@ -1,0 +1,31 @@
+// This file defines the grammar of an expression.
+
+// RegEx Tokens START
+{
+    tokens=[
+        WHITE_SPACE='regexp:\s'
+        DIGIT='regexp:[0-9]'
+        LETTER='regexp:[A-z]'
+        LETTER_LOWER='regexp:[a-z]'
+        LETTER_UPPER='regexp:[A-Z]'
+    ]
+}
+// RegEx Tokens END
+
+
+
+EXPRESSION ::= WHITE_SPACE* SUM WHITE_SPACE*
+
+private IDENTIFIER ::= (LETTER | "_") (LETTER | "_" | DIGIT)*
+
+private SUM ::= PRODUCT (WHITE_SPACE* ("+" | "-") WHITE_SPACE* PRODUCT)*
+private PRODUCT ::= VALUE (WHITE_SPACE* ("*" | "/") WHITE_SPACE* VALUE)*
+private VALUE ::= "-"? WHITE_SPACE* (GROUPED | NUMBER | FUNCTION_CALL | VARIABLE_CALL)
+
+private GROUPED ::= "(" EXPRESSION ")"
+private NUMBER ::= DIGIT+ ("." DIGIT+)? (("e" | "E") ("+" | "-")? DIGIT+)?
+private VARIABLE_CALL ::= IDENTIFIER
+
+private FUNCTION_CALL ::= IDENTIFIER WHITE_SPACE* "(" WHITE_SPACE* FUNCTION_CALL_PARAMETERS WHITE_SPACE* ")"
+private FUNCTION_CALL_PARAMETERS ::= (FUNCTION_CALL_PARAMETER ("," FUNCTION_CALL_PARAMETER)*)?
+private FUNCTION_CALL_PARAMETER ::= EXPRESSION

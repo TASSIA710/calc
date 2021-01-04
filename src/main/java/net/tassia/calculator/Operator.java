@@ -3,20 +3,16 @@ package net.tassia.calculator;
 public final class Operator {
 
     public enum Unary {
-        NEGATION,
-        BIG_NOT
+        NEGATION
     }
 
     public enum Binary {
-        EXPONENT,
-        BIT_XOR
+        EXPONENT
     }
 
     public enum Poly {
         ADDITION,
-        MULTIPLICATION,
-        BIT_AND,
-        BIT_OR
+        MULTIPLICATION
     }
 
     private Operator() {
