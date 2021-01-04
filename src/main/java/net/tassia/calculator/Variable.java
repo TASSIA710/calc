@@ -1,4 +1,4 @@
-package net.tassia.calculator.runtime;
+package net.tassia.calculator;
 
 import org.jetbrains.annotations.NotNull;
 

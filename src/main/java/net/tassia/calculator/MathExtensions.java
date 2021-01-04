@@ -22,6 +22,18 @@ public class MathExtensions {
 		return cache;
 	}
 
+	public static double sum(double...values) {
+		double x = 0;
+		for (double val : values) x += val;
+		return x;
+	}
+
+	public static double product(double...values) {
+		double x = 1;
+		for (double val : values) x *= val;
+		return x;
+	}
+
 	private MathExtensions() {
 	}
 

@@ -1,6 +1,6 @@
 package net.tassia.calculator.provider;
 
-import net.tassia.calculator.runtime.Function;
+import net.tassia.calculator.Function;
 
 import java.util.*;
 

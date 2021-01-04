@@ -1,6 +1,5 @@
-package net.tassia.calculator.runtime;
+package net.tassia.calculator;
 
-import net.tassia.calculator.MathExtensions;
 import org.jetbrains.annotations.NotNull;
 
 public class Function {

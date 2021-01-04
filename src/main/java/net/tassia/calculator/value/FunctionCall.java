@@ -2,16 +2,16 @@ package net.tassia.calculator.value;
 
 public class FunctionCall implements NumericValue {
 
-    private final String variable;
+    private final String function;
     private final NumericValue[] arguments;
 
-    public FunctionCall(String variable, NumericValue...arguments) {
-        this.variable = variable;
+    public FunctionCall(String function, NumericValue...arguments) {
+        this.function = function;
         this.arguments = arguments;
     }
 
-    public String getVariable() {
-        return variable;
+    public String getFunction() {
+        return function;
     }
 
     public NumericValue[] getArguments() {
