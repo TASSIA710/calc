@@ -22,6 +22,8 @@ class CalculatorTest {
 		testExpression("2 * 2", 4);
 		testExpression("max(1, 2, 3, 4, 5)", 5);
 		testExpression("min(1, 2, 3, 4, 5)", 1);
+		testExpression("2 + 2 * 2", 6);
+		testExpression("2 * 2 + 2", 6);
 	}
 
 }
