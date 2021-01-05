@@ -1,18 +1,15 @@
 package net.tassia.calculator;
 
-import org.jetbrains.annotations.NotNull;
-
 public class Function {
 
-	@NotNull private final String name;
-	@NotNull private final Body body;
+	private final String name;
+	private final Body body;
 
-	public Function(@NotNull String name, @NotNull Body body) {
+	public Function(String name, Body body) {
 		this.name = name;
 		this.body = body;
 	}
 
-	@NotNull
 	public String getName() {
 		return name;
 	}
