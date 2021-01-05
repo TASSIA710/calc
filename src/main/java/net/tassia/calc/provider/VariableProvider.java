@@ -1,6 +1,6 @@
 package net.tassia.calc.provider;
 
-import net.tassia.calc.value.NumericValue;
+import net.tassia.calc.Variable;
 
 import java.util.NoSuchElementException;
 
@@ -16,8 +16,8 @@ public interface VariableProvider {
 	 * Returns the value of the variable with the matching name.
 	 * @param name the matching name
 	 * @return the value of the variable
-	 * @throws NoSuchElementException if no variable with the given name exists
+	 * @throws NoSuchElementException if no such variable exists
 	 */
-	NumericValue provideVariable(String name) throws NoSuchElementException;
+	Variable provideVariable(String name) throws NoSuchElementException;
 
 }

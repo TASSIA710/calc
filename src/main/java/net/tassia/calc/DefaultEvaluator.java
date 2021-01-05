@@ -32,7 +32,8 @@ public class DefaultEvaluator implements Evaluator<Double> {
 			for (int i = 0; i < cast.getArguments().length; i++) {
 				args[i] = evaluate(cast.getArguments()[i], variableProvider, functionProvider);
 			}
-			return functionProvider.provideFunction(cast.getFunction(), args);
+			Function function = functionProvider.provideFunction(cast.getFunction());
+			return function.getValue(args);
 
 		} else if (expression instanceof PolyValue) {
 			PolyValue cast = (PolyValue) expression;
@@ -56,8 +57,8 @@ public class DefaultEvaluator implements Evaluator<Double> {
 
 		} else if (expression instanceof VariableCall) {
 			VariableCall cast = (VariableCall) expression;
-			NumericValue value = variableProvider.provideVariable(cast.getVariable());
-			return evaluate(value, variableProvider, functionProvider);
+			Variable var = variableProvider.provideVariable(cast.getVariable());
+			return evaluate(var.getValue(), variableProvider, functionProvider);
 
 		}
 		throw new RuntimeException("Couldn't evaluate value: " + expression);
