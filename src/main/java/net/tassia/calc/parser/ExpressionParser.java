@@ -1,6 +1,6 @@
-package net.tassia.calculator.parser;
+package net.tassia.calc.parser;
 
-import net.tassia.calculator.value.NumericValue;
+import net.tassia.calc.value.NumericValue;
 
 public interface ExpressionParser {
 

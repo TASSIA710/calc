@@ -1,6 +1,6 @@
-package net.tassia.calculator;
+package net.tassia.calc;
 
-import net.tassia.calculator.parser.ParseException;
+import net.tassia.calc.parser.ParseException;
 import org.junit.jupiter.api.Test;
 
 class CalculatorTest {

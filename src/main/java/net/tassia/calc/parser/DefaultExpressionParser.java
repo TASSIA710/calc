@@ -1,7 +1,7 @@
-package net.tassia.calculator.parser;
+package net.tassia.calc.parser;
 
-import net.tassia.calculator.Operator;
-import net.tassia.calculator.value.*;
+import net.tassia.calc.Operator;
+import net.tassia.calc.value.*;
 
 import java.util.ArrayList;
 import java.util.List;

@@ -1,8 +1,8 @@
-package net.tassia.calculator;
+package net.tassia.calc;
 
-import net.tassia.calculator.provider.FunctionProvider;
-import net.tassia.calculator.provider.VariableProvider;
-import net.tassia.calculator.value.*;
+import net.tassia.calc.provider.FunctionProvider;
+import net.tassia.calc.provider.VariableProvider;
+import net.tassia.calc.value.*;
 
 public class DefaultEvaluator implements Evaluator {
 

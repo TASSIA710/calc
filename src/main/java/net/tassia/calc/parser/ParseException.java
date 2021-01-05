@@ -1,4 +1,4 @@
-package net.tassia.calculator.parser;
+package net.tassia.calc.parser;
 
 public class ParseException extends Exception {
 

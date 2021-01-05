@@ -1,4 +1,4 @@
-package net.tassia.calculator.parser;
+package net.tassia.calc.parser;
 
 import java.lang.annotation.ElementType;
 import java.lang.annotation.Retention;

@@ -1,11 +1,10 @@
-package net.tassia.calculator;
+package net.tassia.calc;
 
-import net.tassia.calculator.parser.DefaultExpressionParser;
-import net.tassia.calculator.parser.ExpressionParser;
-import net.tassia.calculator.parser.ParseException;
-import net.tassia.calculator.provider.ListFunctionProvider;
-import net.tassia.calculator.provider.ListVariableProvider;
-import net.tassia.calculator.value.NumericValue;
+import net.tassia.calc.parser.DefaultExpressionParser;
+import net.tassia.calc.parser.ParseException;
+import net.tassia.calc.provider.ListFunctionProvider;
+import net.tassia.calc.provider.ListVariableProvider;
+import net.tassia.calc.value.NumericValue;
 
 /**
  * This class can be used to parse and calculate expressions.

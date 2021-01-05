@@ -1,7 +1,7 @@
-package net.tassia.calculator.provider;
+package net.tassia.calc.provider;
 
-import net.tassia.calculator.Variable;
-import net.tassia.calculator.value.NumericValue;
+import net.tassia.calc.Variable;
+import net.tassia.calc.value.NumericValue;
 
 import java.util.*;
 

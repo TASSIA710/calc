@@ -1,4 +1,4 @@
-package net.tassia.calculator.provider;
+package net.tassia.calc.provider;
 
 import java.util.NoSuchElementException;
 

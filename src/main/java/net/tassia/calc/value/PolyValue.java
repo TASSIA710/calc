@@ -1,6 +1,6 @@
-package net.tassia.calculator.value;
+package net.tassia.calc.value;
 
-import net.tassia.calculator.Operator;
+import net.tassia.calc.Operator;
 
 public class PolyValue implements NumericValue {
 

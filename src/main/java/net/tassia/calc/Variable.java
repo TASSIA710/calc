@@ -1,7 +1,7 @@
-package net.tassia.calculator;
+package net.tassia.calc;
 
-import net.tassia.calculator.value.ConstantValue;
-import net.tassia.calculator.value.NumericValue;
+import net.tassia.calc.value.ConstantValue;
+import net.tassia.calc.value.NumericValue;
 
 public class Variable {
 

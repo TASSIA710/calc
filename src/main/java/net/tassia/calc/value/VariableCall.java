@@ -1,4 +1,4 @@
-package net.tassia.calculator.value;
+package net.tassia.calc.value;
 
 public class VariableCall implements NumericValue {
 

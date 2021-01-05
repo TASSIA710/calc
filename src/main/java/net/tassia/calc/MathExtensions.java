@@ -1,4 +1,4 @@
-package net.tassia.calculator;
+package net.tassia.calc;
 
 public class MathExtensions {
 
