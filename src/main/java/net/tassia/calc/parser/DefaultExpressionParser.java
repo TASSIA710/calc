@@ -7,6 +7,11 @@ import java.util.ArrayList;
 import java.util.List;
 import java.util.function.Predicate;
 
+/**
+ * This is the default {@link ExpressionParser} implementation.
+ * @author Tassilo
+ * @since Calc 1.0
+ */
 public class DefaultExpressionParser implements ExpressionParser {
 
 	private static final char EOF = (char) -1;
@@ -272,11 +277,19 @@ public class DefaultExpressionParser implements ExpressionParser {
 
 
 
+	/**
+	 * Returns the next character.
+	 * @return the next char
+	 */
 	private char peek() {
 		if (position >= input.length()) return EOF;
 		return input.charAt(position);
 	}
 
+	/**
+	 * Advances the position holder.
+	 * @return the char that has been read
+	 */
 	private char next() {
 		char c = peek();
 		position++;
@@ -285,6 +298,11 @@ public class DefaultExpressionParser implements ExpressionParser {
 
 
 
+	/**
+	 * Returns a new ParseException.
+	 * @param expected what tokens were expected
+	 * @return the created ParseException
+	 */
 	private ParseException expected(String...expected) {
 		return new ParseException(input, position, 1, "Expected " + String.join(", ", expected));
 	}
