@@ -41,9 +41,9 @@ public class ParseException extends Exception {
 	 * @return a displayable string
 	 */
 	public static String getDisplayed(ParseException ex) {
-		String str = ex.source;
+		String str = ex.getSource();
 		str += "\n";
-		str += repeat(" ", ex.position) + repeat("^", ex.length);
+		str += repeat(" ", ex.getPosition()) + repeat("^", ex.getLength());
 		return str;
 	}
 
