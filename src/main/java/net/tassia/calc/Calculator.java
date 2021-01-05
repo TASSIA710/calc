@@ -15,7 +15,7 @@ public class Calculator {
 
 	private final ListVariableProvider variableProvider;
 	private final ListFunctionProvider functionProvider;
-	private final Evaluator evaluator;
+	private final Evaluator<Double> evaluator;
 
 	/**
 	 * Creates a new calculator with no pre-defined variables or functions.

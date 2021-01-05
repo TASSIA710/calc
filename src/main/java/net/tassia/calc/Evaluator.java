@@ -5,8 +5,8 @@ import net.tassia.calc.provider.VariableProvider;
 import net.tassia.calc.value.NumericValue;
 
 @FunctionalInterface
-public interface Evaluator {
+public interface Evaluator<T> {
 
-	double evaluate(NumericValue expression, VariableProvider variableProvider, FunctionProvider functionProvider);
+	T evaluate(NumericValue expression, VariableProvider variableProvider, FunctionProvider functionProvider);
 
 }

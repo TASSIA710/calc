@@ -4,10 +4,10 @@ import net.tassia.calc.provider.FunctionProvider;
 import net.tassia.calc.provider.VariableProvider;
 import net.tassia.calc.value.*;
 
-public class DefaultEvaluator implements Evaluator {
+public class DefaultEvaluator implements Evaluator<Double> {
 
 	@Override
-	public double evaluate(NumericValue expression, VariableProvider variableProvider, FunctionProvider functionProvider) {
+	public Double evaluate(NumericValue expression, VariableProvider variableProvider, FunctionProvider functionProvider) {
 		if (expression instanceof BinaryValue) {
 			BinaryValue cast = (BinaryValue) expression;
 			double left = evaluate(cast.getLeftHand(), variableProvider, functionProvider);
