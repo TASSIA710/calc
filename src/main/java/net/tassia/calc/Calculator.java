@@ -53,28 +53,52 @@ public class Calculator {
 
 
 
+	/**
+	 * Registers a new function.
+	 * @param function the function
+	 */
 	public void addFunction(Function function) {
 		functionProvider.addFunction(function);
 	}
 
+	/**
+	 * Unregisters a function.
+	 * @param function the function
+	 */
 	public void removeFunction(Function function) {
 		functionProvider.removeFunction(function.getName());
 	}
 
+	/**
+	 * Unregisters a function.
+	 * @param name the function name
+	 */
 	public void removeFunction(String name) {
 		functionProvider.removeFunction(name);
 	}
 
 
 
+	/**
+	 * Registers a new variable.
+	 * @param variable the variable
+	 */
 	public void addVariable(Variable variable) {
 		variableProvider.addVariable(variable);
 	}
 
+	/**
+	 * Unregisters a variable.
+	 * @param variable the variable
+	 */
 	public void removeVariable(Variable variable) {
 		variableProvider.removeVariable(variable.getName());
 	}
 
+	/**
+	 * Unregisters a variable.
+	 * @param name the variable name
+	 */
 	public void removeVariable(String name) {
 		variableProvider.removeVariable(name);
 	}
