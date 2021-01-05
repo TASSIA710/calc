@@ -2,28 +2,25 @@ package net.tassia.calculator;
 
 import net.tassia.calculator.value.ConstantValue;
 import net.tassia.calculator.value.NumericValue;
-import org.jetbrains.annotations.NotNull;
 
 public class Variable {
 
-	@NotNull private final String name;
-	@NotNull private final NumericValue value;
+	private final String name;
+	private final NumericValue value;
 
-	public Variable(@NotNull String name, double value) {
+	public Variable(String name, double value) {
 		this(name, new ConstantValue(value));
 	}
 
-	public Variable(@NotNull String name, @NotNull NumericValue value) {
+	public Variable(String name, NumericValue value) {
 		this.name = name;
 		this.value = value;
 	}
 
-	@NotNull
 	public String getName() {
 		return name;
 	}
 
-	@NotNull
 	public NumericValue getValue() {
 		return value;
 	}
