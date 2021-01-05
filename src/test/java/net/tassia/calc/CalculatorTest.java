@@ -5,7 +5,7 @@ import org.junit.jupiter.api.Test;
 
 class CalculatorTest {
 
-	void testExpression(String term, double expect) throws ParseException {
+	private void testExpression(String term, double expect) throws ParseException {
 		try {
 			double result = Calculator.calculate(term);
 			System.out.println(term + " = " + result);
