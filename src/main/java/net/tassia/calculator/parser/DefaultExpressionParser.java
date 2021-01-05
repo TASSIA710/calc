@@ -82,10 +82,12 @@ public class DefaultExpressionParser implements ExpressionParser {
 	@SafeVarargs
 	private final <T> TokenReaderFunction<T> union(String[] names, TokenReaderFunction<T>...functions) {
 		return () -> {
+			int start = position;
 			for (TokenReaderFunction<T> function : functions) {
 				try {
 					return function.read();
 				} catch (ParseException ignored) {
+					position = start;
 				}
 			}
 			throw expected(names);
