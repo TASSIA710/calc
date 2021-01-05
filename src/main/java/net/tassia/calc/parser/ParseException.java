@@ -1,5 +1,10 @@
 package net.tassia.calc.parser;
 
+/**
+ * This exception is thrown when something goes wrong while parsing a string of text.
+ * @author Tassilo
+ * @since Calc 1.0
+ */
 public class ParseException extends Exception {
 
 	private final String source;
@@ -30,6 +35,11 @@ public class ParseException extends Exception {
 
 
 
+	/**
+	 * Builds a displayable string for the exception. The string consists of two lines.
+	 * @param ex the exception to format
+	 * @return a displayable string
+	 */
 	public static String getDisplayed(ParseException ex) {
 		String str = ex.source;
 		str += "\n";
