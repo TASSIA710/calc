@@ -8,7 +8,7 @@ import java.lang.annotation.Target;
 /**
  * Signals that a method is responsible for reading a grammar token.
  * @author Tassilo
- * @since Calculator 1.0
+ * @since Calc 1.0
  */
 @Retention(RetentionPolicy.SOURCE)
 @Target(ElementType.METHOD)
