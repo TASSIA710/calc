@@ -32,4 +32,6 @@ class Decimal(val value: Double) : ICalculatable {
 
 	override fun evaluateDouble(): Double = value
 
+	override fun evaluateLong(): Long = value.toLong()
+
 }
