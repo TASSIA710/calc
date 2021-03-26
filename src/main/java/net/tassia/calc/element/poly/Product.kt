@@ -41,4 +41,10 @@ class Product(override val operands: Collection<ICalculatable>) : IPolyOperation
 		return cache
 	}
 
+	override fun evaluateLong(): Long {
+		var cache = 1L
+		operands.forEach { cache *= it.evaluateLong() }
+		return cache
+	}
+
 }
