@@ -37,4 +37,8 @@ class Remainder(override val leftHand: ICalculatable, override val rightHand: IC
 		return leftHand.evaluateDouble() % rightHand.evaluateDouble()
 	}
 
+	override fun evaluateLong(): Long {
+		return leftHand.evaluateLong() % rightHand.evaluateLong()
+	}
+
 }
