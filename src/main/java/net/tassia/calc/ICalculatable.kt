@@ -9,10 +9,17 @@ package net.tassia.calc
 interface ICalculatable {
 
 	/**
+	 * Evaluates the [Float] value for this element.
+	 *
+	 * @return the value
+	 */
+	fun evaluateFloat(): Float = evaluateDouble().toFloat()
+
+	/**
 	 * Evaluates the [Double] value for this element.
 	 *
 	 * @return the value
 	 */
-	fun evaluate(): Double
+	fun evaluateDouble(): Double
 
 }
