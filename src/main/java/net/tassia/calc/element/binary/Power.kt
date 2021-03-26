@@ -2,6 +2,7 @@ package net.tassia.calc.element.binary
 
 import net.tassia.calc.ICalculatable
 import net.tassia.calc.Math
+import net.tassia.calc.function.std.PowerFunction
 
 /**
  * The power is a binary-operation the raises the left-hand value to the right-hand value.
@@ -11,7 +12,7 @@ import net.tassia.calc.Math
  */
 class Power(override val leftHand: ICalculatable, override val rightHand: ICalculatable) : IBinaryOperation, ICalculatable {
 
-	override val name: String = "pow"
+	override val name: String = PowerFunction.name
 
 
 
