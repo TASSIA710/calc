@@ -139,6 +139,20 @@ interface ICalculatable : Comparable<ICalculatable> {
 	 */
 	fun evaluateDouble(): Double
 
+	/**
+	 * Evaluates the [Int] value for this element.
+	 *
+	 * @return the value
+	 */
+	fun evaluateInt(): Int = evaluateLong().toInt()
+
+	/**
+	 * Evaluates the [Long] value for this element.
+	 *
+	 * @return the value
+	 */
+	fun evaluateLong(): Long
+
 
 
 	/**
