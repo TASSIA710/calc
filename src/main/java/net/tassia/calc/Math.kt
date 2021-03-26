@@ -1,5 +1,7 @@
 package net.tassia.calc
 
+import kotlin.math.floor
+
 /**
  * Collection of useful math functions.
  *
@@ -9,23 +11,25 @@ package net.tassia.calc
 object Math {
 
 	/**
-	 * Calculates the square root for the given float value.
+	 * Calculates the square root for the given value.
 	 *
 	 * @param value the value
 	 * @return the square root
 	 */
-	fun sqrt(value: Float): Float {
-		return kotlin.math.sqrt(value)
+	fun sqrt(value: ICalculatable): ICalculatable {
+		TODO()
 	}
 
+
+
 	/**
-	 * Calculates the square root for the given double value.
+	 * Tests if the given double is an integer.
 	 *
-	 * @param value the value
-	 * @return the square root
+	 * @param test the double to test
+	 * @return is integer
 	 */
-	fun sqrt(value: Double): Double {
-		return kotlin.math.sqrt(value)
+	fun isInteger(test: Double): Boolean {
+		return floor(test) == test
 	}
 
 }
