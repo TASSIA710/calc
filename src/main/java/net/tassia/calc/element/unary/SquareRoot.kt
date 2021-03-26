@@ -2,6 +2,7 @@ package net.tassia.calc.element.unary
 
 import net.tassia.calc.ICalculatable
 import net.tassia.calc.Math
+import net.tassia.calc.function.std.SquareRootFunction
 
 /**
  * The square root is a unary-operation that calculates the square root of a given value.
@@ -11,7 +12,7 @@ import net.tassia.calc.Math
  */
 class SquareRoot(override val operand: ICalculatable) : IUnaryOperation, ICalculatable {
 
-	override val name: String = "sqrt"
+	override val name: String = SquareRootFunction.name
 
 
 
