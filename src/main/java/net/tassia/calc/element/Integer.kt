@@ -30,4 +30,6 @@ class Integer(val value: Long) : ICalculatable {
 
 	override fun evaluateDouble(): Double = value.toDouble()
 
+	override fun evaluateLong(): Long = value
+
 }
