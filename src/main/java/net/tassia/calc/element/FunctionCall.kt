@@ -37,4 +37,8 @@ class FunctionCall(val function: Function, val args: List<ICalculatable>) : ICal
 		return function(args).evaluateDouble()
 	}
 
+	override fun evaluateLong(): Long {
+		return function(args).evaluateLong()
+	}
+
 }
