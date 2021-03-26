@@ -30,4 +30,6 @@ class VariableCall(val variable: Variable) : ICalculatable {
 
 	override fun evaluateDouble(): Double = variable.get().evaluateDouble()
 
+	override fun evaluateLong(): Long = variable.get().evaluateLong()
+
 }
