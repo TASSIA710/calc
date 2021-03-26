@@ -1,9 +1,7 @@
 package net.tassia.calc.element.poly
 
 import net.tassia.calc.ICalculatable
-import net.tassia.calc.calc
-import net.tassia.calc.element.binary.Fraction
-import net.tassia.calc.merge
+import net.tassia.calc.function.std.ProductFunction
 
 /**
  * A product is a poly-operation that multiplies all operands together to produce an output.
@@ -17,21 +15,7 @@ class Product(override val operands: Collection<ICalculatable>) : IPolyOperation
 
 	constructor(vararg operands: ICalculatable) : this(operands.toList())
 
-
-
-	override fun plus(other: ICalculatable): ICalculatable = Sum(this, other)
-
-	override fun minus(other: ICalculatable): ICalculatable = plus(-other)
-
-	override fun times(other: ICalculatable): ICalculatable = Product(operands.merge(other))
-
-	override fun div(other: ICalculatable): ICalculatable = times(Fraction(1.calc(), other))
-
-
-
-	override fun toFunctionString(): String {
-		return "mul(" + operands.joinToString(transform = ICalculatable::toFunctionString) + ")"
-	}
+	override val name: String = ProductFunction.name
 
 
 

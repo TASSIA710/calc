@@ -1,6 +1,7 @@
 package net.tassia.calc.element.binary
 
 import net.tassia.calc.ICalculatable
+import net.tassia.calc.IFunctionString
 
 /**
  * A binary operation is an operation with two operands.
@@ -8,7 +9,7 @@ import net.tassia.calc.ICalculatable
  * @since Calc 1.0
  * @author Tassilo
  */
-interface IBinaryOperation {
+interface IBinaryOperation : IFunctionString {
 
 	/**
 	 * The left-hand operand.
@@ -19,5 +20,13 @@ interface IBinaryOperation {
 	 * The right-hand operand.
 	 */
 	val rightHand: ICalculatable
+
+
+
+	val name: String
+
+	override fun toFunctionString(): String {
+		return name + "(" + leftHand.toFunctionString() + ", " + rightHand.toFunctionString() + ")"
+	}
 
 }

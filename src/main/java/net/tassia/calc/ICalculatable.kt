@@ -1,6 +1,10 @@
 package net.tassia.calc
 
+import net.tassia.calc.element.binary.Fraction
+import net.tassia.calc.element.binary.Power
 import net.tassia.calc.element.binary.Remainder
+import net.tassia.calc.element.poly.Product
+import net.tassia.calc.element.poly.Sum
 
 /**
  * Base for essentially every element of this library.
@@ -8,7 +12,7 @@ import net.tassia.calc.element.binary.Remainder
  * @since Calc 1.0
  * @author Tassilo
  */
-interface ICalculatable : Comparable<ICalculatable> {
+interface ICalculatable : IFunctionString, Comparable<ICalculatable> {
 
 	/**
 	 * Adds this element to another element.
@@ -16,7 +20,7 @@ interface ICalculatable : Comparable<ICalculatable> {
 	 * @param other the element to add
 	 * @return the addition result
 	 */
-	operator fun plus(other: ICalculatable): ICalculatable
+	operator fun plus(other: ICalculatable): ICalculatable = Sum(this, other)
 
 	/**
 	 * Subtracts an element from this element.
@@ -24,7 +28,7 @@ interface ICalculatable : Comparable<ICalculatable> {
 	 * @param other the element to subtract
 	 * @return the subtraction result
 	 */
-	operator fun minus(other: ICalculatable): ICalculatable
+	operator fun minus(other: ICalculatable): ICalculatable = plus(-other)
 
 	/**
 	 * Multiplies this element with another element.
@@ -32,7 +36,7 @@ interface ICalculatable : Comparable<ICalculatable> {
 	 * @param other the element to multiply with
 	 * @return the multiplication result
 	 */
-	operator fun times(other: ICalculatable): ICalculatable
+	operator fun times(other: ICalculatable): ICalculatable = Product(this, other)
 
 	/**
 	 * Divides an element from this element.
@@ -40,7 +44,7 @@ interface ICalculatable : Comparable<ICalculatable> {
 	 * @param other the element to divide with
 	 * @return the division result
 	 */
-	operator fun div(other: ICalculatable): ICalculatable
+	operator fun div(other: ICalculatable): ICalculatable = Fraction(this, other)
 
 
 
@@ -51,6 +55,14 @@ interface ICalculatable : Comparable<ICalculatable> {
 	 * @return the remainder
 	 */
 	operator fun rem(other: ICalculatable): ICalculatable = Remainder(this, other)
+
+	/**
+	 * Returns this value, raised to the other value.
+	 *
+	 * @param other the other value
+	 * @return the result
+	 */
+	infix fun pow(other: ICalculatable): ICalculatable = Power(this, other)
 
 	// TODO: RangeTo
 
@@ -97,15 +109,6 @@ interface ICalculatable : Comparable<ICalculatable> {
 	 * @see Comparable
 	 */
 	override operator fun compareTo(other: ICalculatable): Int = this.evaluateDouble().compareTo(other.evaluateDouble())
-
-
-
-	/**
-	 * Converts this element into an easily parsable function string.
-	 *
-	 * @return the function string
-	 */
-	fun toFunctionString(): String
 
 
 

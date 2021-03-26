@@ -1,6 +1,7 @@
 package net.tassia.calc
 
 import kotlin.math.floor
+import kotlin.math.pow
 
 /**
  * Collection of useful math functions.
@@ -10,14 +11,24 @@ import kotlin.math.floor
  */
 object Math {
 
+	fun pow(value: Double, exponent: Double): Double {
+		return value.pow(exponent)
+	}
+
+	fun pow(value: Long, exponent: Long): Long {
+		return value.toDouble().pow(exponent.toDouble()).toLong()
+	}
+
+
+
 	/**
-	 * Calculates the square root for the given value.
+	 * Calculates the square root for the given [Double] value.
 	 *
 	 * @param value the value
 	 * @return the square root
 	 */
-	fun sqrt(value: ICalculatable): ICalculatable {
-		TODO()
+	fun sqrt(value: Double): Double {
+		return kotlin.math.sqrt(value)
 	}
 
 

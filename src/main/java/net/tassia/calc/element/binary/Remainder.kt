@@ -1,9 +1,7 @@
 package net.tassia.calc.element.binary
 
 import net.tassia.calc.ICalculatable
-import net.tassia.calc.calc
-import net.tassia.calc.element.poly.Product
-import net.tassia.calc.element.poly.Sum
+import net.tassia.calc.function.std.RemainderFunction
 
 /**
  * The remainder if a binary-operation that divides the right-hand value
@@ -17,19 +15,7 @@ import net.tassia.calc.element.poly.Sum
  */
 class Remainder(override val leftHand: ICalculatable, override val rightHand: ICalculatable) : IBinaryOperation, ICalculatable {
 
-	override fun plus(other: ICalculatable): ICalculatable = Sum(this, other)
-
-	override fun minus(other: ICalculatable): ICalculatable = plus(-other)
-
-	override fun times(other: ICalculatable): ICalculatable = Product(this, other)
-
-	override fun div(other: ICalculatable): ICalculatable = times(Fraction(1.calc(), other))
-
-
-
-	override fun toFunctionString(): String {
-		return "rem(" + leftHand.toFunctionString() + ", " + rightHand.toFunctionString() + ")"
-	}
+	override val name: String = RemainderFunction.name
 
 
 
