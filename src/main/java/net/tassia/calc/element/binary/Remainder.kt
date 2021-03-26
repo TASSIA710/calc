@@ -4,7 +4,7 @@ import net.tassia.calc.ICalculatable
 import net.tassia.calc.function.std.RemainderFunction
 
 /**
- * The remainder if a binary-operation that divides the right-hand value
+ * The remainder is a binary-operation that divides the right-hand value
  * from the left-hand value and determines its remainder.
  *
  * @param leftHand the left-hand value
