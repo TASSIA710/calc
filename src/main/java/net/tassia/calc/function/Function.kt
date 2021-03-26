@@ -2,10 +2,7 @@ package net.tassia.calc.function
 
 import net.tassia.calc.ICalculatable
 import net.tassia.calc.MathException
-import net.tassia.calc.function.std.FractionFunction
-import net.tassia.calc.function.std.ProductFunction
-import net.tassia.calc.function.std.RemainderFunction
-import net.tassia.calc.function.std.SumFunction
+import net.tassia.calc.function.std.*
 
 /**
  * A function is something that can be invoked with `n` arguments to produce an output.
@@ -55,7 +52,7 @@ abstract class Function(val name: String) {
 		 * A set containing default functions for new environments.
 		 */
 		val DefaultFunctions: Set<Function> = setOf(
-			FractionFunction, ProductFunction, RemainderFunction, SumFunction
+			FractionFunction, PowerFunction, ProductFunction, RemainderFunction, SquareRootFunction, SumFunction
 		)
 
 	}
