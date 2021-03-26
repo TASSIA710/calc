@@ -1,3 +1,3 @@
 package net.tassia.calc
 
-const val ITERATIONS = 65536
+const val ITERATIONS_FAST = 4096 * 4096
