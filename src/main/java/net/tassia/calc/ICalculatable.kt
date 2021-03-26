@@ -139,4 +139,15 @@ interface ICalculatable : Comparable<ICalculatable> {
 	 */
 	fun evaluateDouble(): Double
 
+
+
+	/**
+	 * Evaluates this element.
+	 *
+	 * @return the value
+	 *
+	 * @see [evaluateDouble]
+	 */
+	operator fun invoke(): Double = evaluateDouble()
+
 }
