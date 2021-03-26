@@ -35,4 +35,8 @@ class Fraction(override val leftHand: ICalculatable, override val rightHand: ICa
 		return leftHand.evaluateDouble() / rightHand.evaluateDouble()
 	}
 
+	override fun evaluateLong(): Long {
+		return leftHand.evaluateLong() / rightHand.evaluateLong()
+	}
+
 }
