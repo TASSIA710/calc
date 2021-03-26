@@ -40,4 +40,10 @@ class Sum(override val operands: Collection<ICalculatable>) : IPolyOperation, IC
 		return cache
 	}
 
+	override fun evaluateLong(): Long {
+		var cache = 0L
+		operands.forEach { cache += it.evaluateLong() }
+		return cache
+	}
+
 }
