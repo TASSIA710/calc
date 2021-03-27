@@ -87,7 +87,7 @@ interface ICalculatable : IFunctionString, Comparable<ICalculatable> {
 	/**
 	 * Returns this element, incremented by 1.
 	 *
-	 * @exception the incremented value
+	 * @return the incremented value
 	 */
 	operator fun inc(): ICalculatable = plus(1.calc())
 
