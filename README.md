@@ -1,5 +1,8 @@
-# Calculator
-Parse expressions and calculate them. Or do other cool things with them.
+<img src="https://cdn.tassia.net/github/assets/TASSIA710/calc.png" align="center" alt="calc">
+
+---
+
+
 
 ## Example
 
